@@ -1,0 +1,313 @@
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+html, body{
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(220, 253, 101);
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color:rgb(228, 161, 60);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 20%;
+    height: 20%;
+    
+}
+
+div.container {
+    padding: 16px;
+    
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color:  rgb(220, 253, 101);
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra sdybl screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+
+
+.content{
+    padding: 80px 0px  0px  0px ;
+}
+
+.content__text{
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.content__text p{
+    margin: 0px 0px 20px 0px;
+}
+
+@media (max-width:767px){
+    .content{
+        padding: 70px 0 0 0;
+    }
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.d-block{
+    width: 100%;
+    max-height: 400px;
+    box-sizing: border-box;
+    padding: 5px 5px;
+}
+.content__name {
+    text-align: center;
+    padding: 5px;
+    color: black;
+}
+.content__opisanie {
+    padding: 5px;
+}
+.content__sena {
+    padding: 5px;
+}
+.content__tyr{
+    margin: 10px 0 0 0;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.content__dybai {
+    max-width: 90%;
+    height: 100%;
+    border: gray solid 2px;
+    margin: 0 10%;
+    background-color: rgb(107, 179, 238);
+    
+}
+.content__dybdivi {
+    max-width: 90%;
+    height: 100%;
+    border: gray solid 2px;
+    margin: 0 10%;
+    background-color: rgb(253, 219, 108);
+    
+}
+
+.content__tayga {
+    max-width: 90%;
+    height: 100%;
+    border: gray solid 2px;
+    margin: 0 10%;
+    background-color: rgb(50, 126, 60);
+}
+.content__everest{  
+    max-width: 90%;
+    height: 100%;
+    border: gray solid 2px;
+    margin: 0 10%;
+    background-color: rgb(194, 117, 1);
+
+}
+
+.content__itali{
+    max-width: 90%;
+    height: 100%;
+    border: gray solid 2px;
+    margin: 0 10%;
+    background-color: rgb(247, 227, 202);
+}
+.content__tursia{
+    max-width: 90%;
+    height: 100%;
+    border: gray solid 2px;
+    margin: 0 10%;
+    background-color: rgb(245, 229, 208);
+}
+.white{
+    color: #666699;
+}
+a:hover{
+    color: black;
+}
+/*-------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------------*/ 
+.nav{
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    margin-left:115px ;
+    margin-right: 130px ;
+    
+}
+.nav-link{
+    width: 100px;
+    height: 100px;
+    display:block;
+
+    
+}
+.nav-item{
+    border: gray solid 1px;
+    border-radius: 50%;
+}
+.nav-item:nth-child(1){
+    background-color: yellow;
+}
+.nav-item:nth-child(2){
+    background-color: rgb(176, 241, 122);
+}
+.nav-item:nth-child(3){
+    background-color: rgb(192, 194, 189);
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media (max-width:767px ){
+    .nav{
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+        margin-left:100px ;
+        margin-right: 100px ;
+    }  
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media (max-width:600px ){
+     ul.nav{
+         margin:0 60px ;
+     }
+    .nav-link{
+        width: 75px;
+        height: 75px;
+        display:block;
+        font-size: 12px;
+        padding: 0px 10px;
+    }
+    
+}
+
+.bg-review {
+    margin: 10px;
+    padding: 10px;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+img.foto{
+    display: block;
+    position: fixed;
+    width: 100% ;
+    height: 100%;
+}

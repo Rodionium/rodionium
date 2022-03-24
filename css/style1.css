@@ -1,0 +1,272 @@
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+html, body{
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.container{
+    max-width: 1180px;
+    margin: 0px auto;
+    padding:0px 10px;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;        
+}
+
+.header:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(228, 161, 60);
+    z-index: 2;
+}
+
+.header__body{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+.header__logo{
+    flex: 0 0 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    z-index: 3 ;
+}
+
+
+
+.header__logo img{
+    max-width: 100%;
+    display: block;
+}
+
+.header__burger{
+    display: none;
+}
+
+
+.header__list{
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+
+.header__list li{
+    list-style: none;
+    margin: 0px 0px 0px 30px;
+}
+
+.header__link{
+    
+    text-transform: uppercase;
+    font-size: 18px;
+    text-decoration: none;
+    color:#fff;
+}
+
+
+
+@media  (max-width: 767px){
+    body.lock{
+        overflow: hidden;
+    }
+    .header__body{
+        height: 50px;
+        
+    }
+    .header__logo{
+        flex: 0 0 40px;
+    }
+    .header__burger{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 3;
+        
+    }
+    .header__burger span{
+        background-color: gray;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+    .header__burger:before,
+    .header__burger:after{
+        content: '';
+        background-color: gray;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0px;
+        transition: all 0.3s ease 0s;
+    }
+    .header__burger:after{
+        bottom: 0px;
+    }
+    .header__burger:before{
+        top: 0px;
+    }
+    .header__burger.active:before{
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .header__burger.active:after{
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .header__burger.active span{
+        transform: scale(0);
+        
+    }
+    .header__menu{
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height:  50%;
+        background-color: #5e5373;
+        padding: 70px 10px 20px 10px;
+        transition: all 0.3s ease 0s;
+        overflow: auto;
+    }
+    .header__menu.active{
+        top: 0;
+    }
+
+    .header__list{
+        display: block;
+        
+    }
+    .header__list li{
+        margin: 0px 0px 20px 0px;
+        
+    }
+}
+
+
+.content{
+    padding: 100px 0px  0px  0px ;
+}
+
+.content__text{
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.content__text p{
+    margin: 0px 0px 20px 0px;
+}
+
+@media (max-width:767px){
+    .content{
+        padding: 70px 0 0 0;
+    }
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.footer{ 
+    background: rgb(228, 161, 60);
+    font-size: 15px;
+    width: 100%;
+    padding: 0 0 15px 0;
+    color: #fff;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+table{
+    margin: 25px 0 10px 0 ;
+    padding: 30px 30px 0 30px ;
+    caption-side:top;
+}
+caption{
+    text-align: center;
+    margin: 15px 0 0 0;
+    font-size: 20px;
+    color: rgb(229, 230, 228);
+
+}
+.padding{
+    padding: 0 5px 0 0;
+}
+
+.mail{
+    width: 200px;
+    text-align: center;
+}
+.klient{
+    text-align: right;
+    width: 1050px;
+}
+.cet{
+text-align: left;
+width: 1050px;
+}
+.white{
+    color: white;
+}
+th a:hover{
+    text-decoration: underline;
+    border: gray;
+    border-radius: 15%;
+    
+    background: gray;
+}
+th img{
+    width: 25px;
+    height: 25px;
+}
+
+@media (max-width:767px) {
+    table{
+        
+        padding: 15px 10px 0 10px ;
+    }  
+    caption{
+        font-size: 15px;
+    }
+    th{
+        font-size: 15px;
+    }
+    th img{
+        width: 13px;
+        height: 13px;
+    }
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/

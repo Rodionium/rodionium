@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перелёт</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/Poezdka.css">
+</head>
+<body>
+    <header class="header">
+            <div class='container'>
+                <div class="header__body">
+                    <a href="./index.html" class="header__logo">
+                        <img src="../image/1.jpg" alt="">
+                        
+                    </a>
+                    
+                    <div class="header__burger">
+                        <span></span>
+                    </div>
+                    <nav class="header__menu">
+                        <ul class="header__list">
+                            <li>
+                                <a href="../html/index.html" class="header__link">Главная</a>
+                            </li>
+                            <li>
+                                <a href="#top1" class="header__link">Контакты</a>
+                            </li>
+                            <li>
+                                <a href="../html/Poezdka.html" class="header__link">Поездка</a>
+                            </li>
+                            <li>
+                                <a href="../html/otziv.html" class="header__link">Отзыв</a>
+                            </li>
+                            <li>
+                                <a href="" class="header__link">Вход</a>
+                            </li>
+                            
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    </header>
+    <div class="body">
+        <div class="content">
+            <div class='container'>
+                <div class="content__text">
+                    <div itemscope itemtype="//schema.org/Review" class="<?if($COMMENT_RATING$ >= 0)?>bg-success<?else?>bg-danger<?endif?> bg-review">
+                        <div class="row">
+                            <div class="col-xs-3 col-sm-2 col-md-1 text-center">
+                                <?if($USER_AVATAR_URL$)?>
+                                    <?if($SOC_LINK$)?>
+                                        <a rel="nofollow" href="$SOC_LINK$" title="$USERNAME$"><img src="$USER_AVATAR_URL$" alt="$USERNAME$" class="img-circle img-responsive"/></a>
+                                    <?else?>
+                                        <a href="$PROFILE_URL$" title="$USERNAME$"><img src="$USER_AVATAR_URL$" alt="$USERNAME$" class="img-circle img-responsive"/></a>
+                                    <?endif?>
+                                <?else?>
+                                    <img src="/.s/img/icon/social/noavatar.png" alt="$USERNAME$" class="img-circle img-responsive"/>
+                                <?endif?>
+                                <div class="<?if($COMMENT_RATING$ >= 0)?>text-success<?else?>text-danger<?endif?>">
+                                    <?if($GOOD_COMMENT_URL$)?>
+                                    <a href="$GOOD_COMMENT_URL$"><img alt="" src="/.s/img/icon/thumbu2.png" title="Хороший пост" style="margin:0 4px; vertical-align:middle;"></a>
+                                    <?if($COMMENT_RATING$ > 0)?><span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                                            <span itemprop="ratingValue">$COMMENT_RATING$</span>
+                                        </span>
+                                    <?else?>$COMMENT_RATING$<?endif?>
+                    
+                                    <a href="$BAD_COMMENT_URL$"><img alt="" src="/.s/img/icon/thumbd2.png" title="Плохой пост" style="margin:0 4px; vertical-align:middle;"></a>
+                                    <?else?>
+                                    <img alt="" src="/.s/img/icon/thumbu2_.png" title="Хороший пост" style="margin:0 4px; vertical-align:middle; opacity:.5; ">
+                                    <?if($COMMENT_RATING$ > 0)?><span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                                            <span itemprop="ratingValue">$COMMENT_RATING$</span>
+                                        </span>
+                                    <?else?>$COMMENT_RATING$<?endif?>
+                    
+                                    <img alt="" src="/.s/img/icon/thumbd2_.png" title="Плохой пост" style="margin:0 4px; vertical-align:middle; opacity:.5;">
+                                    <?endif?>
+                                </div>
+                            </div>
+                            <div class="col-xs-9 col-sm-10 col-sm-11">
+                                <?if($MODER_PANEL$)?><div class="pull-right">$MODER_PANEL$</div><?endif?>
+                                <p>
+                                    <a href="#ent$ID$" onclick="prompt('', location.protocol + '//' + location.hostname + location.pathname + location.search + '#comEnt$ID$' ); if (document.getElementById('comEnt$ID$') ) { $('body').scrollTo({top:$('#comEnt$ID$').offset().top-54, left:0 }, 500 ); return false; }" name="ent$ID$"><b>$NUMBER$</b></a>
+                                    <?if($SOC_TYPE$)?><img src="/.s/img/icon/social/16/$SOC_TYPE$.png" alt="" /><?endif?>
+                                    <?if($USERNAME$)?><a itemprop="author" itemscope itemtype="https://schema.org/Person" href="$PROFILE_URL$" class="uc-profile-link"><span itemprop="name">$USERNAME$</span></a>
+                                    <?else?>
+                                    <?if($SOC_LINK$)?><a itemprop="author" itemscope itemtype="https://schema.org/Person" rel="nofollow" href="$SOC_LINK$" class="uc-profile-link"><span itemprop="name">$NAME$</span></a>
+                                    <?else?><span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">$NAME$</span></span><?endif?>
+                                    <?endif?>
+                                    <span itemprop="datePublished" content="$DATE_FORMATTED$ $TIME$" class="uc-opacity">&#8226; $TIME$, $DATE$</span>
+                                </p>
+                                <div itemprop="reviewBody">
+                    
+                                    $MESSAGE$
+                                    <?if($ANSWER$)?><hr /><div><b>Ответ</b>: $ANSWER$</div><?endif?>
+                                    <?if($ANSWER_URL$)?><div><a href="$ANSWER_URL$" class="btn btn-success">Ответить</a></div><?endif?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <div class="footer">
+        <div class='container'>
+            <table >
+            <caption >  Наши Контакты </caption>
+            <p id="top1"></p>
+            <tr>
+                <th ><img class="padding" src="../image/2.png"></th>
+                <th class="cet">Вконтакте</th>
+                <th  class="mail">Наш телефон</th>
+                <th rowspan="3" class="klient"><a class="white" href="#" >О нас </a></th>
+            </tr>
+            <tr>
+                <th ><img class="padding" src="../image/3.png"></th>
+                <th class="cet">Facebook</th>
+                <th rowspan="2" class="mail"> +380 (72)-255-41-69</th>
+            </tr>
+            <tr>
+                <th ><img class="padding" src="../image/4.png"></th>
+                <th class="cet">Twitter</th>
+            </tr>
+            <tr>
+                <th ><img class="padding" src="../image/5.png"></th>
+                <th class="cet">TikTok</th>
+                <th  class="mail">Наш Email</th>
+                <th rowspan="3" class="klient">Тех-поддержка</th>
+            </tr>
+            <tr>
+                <th ><img class="padding" src="../image/6.png"></th>
+                <th class="cet">YouTube</th>
+                <th rowspan="2" class="mail"> Perelet@gmail.com</th>
+            </tr>
+            <tr>
+                <th ><img class="padding" src="../image/7.png"></th>
+                <th class="cet" >instagram</th>
+            </tr>
+            </table>
+        
+        
+        </div>
+</div>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/menu.js"></script>
+</body>
+</html>
